@@ -1,0 +1,3 @@
+Shaders written to run as pixel shader on shadertoy
+
+link to interactive versions here: https://www.shadertoy.com/profile/?show=shaders
