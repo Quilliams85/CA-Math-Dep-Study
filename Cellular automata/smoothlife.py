@@ -1,11 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+import matplotlib.animation as animation
 import scipy
 from scipy.spatial import distance
 
 
-N=400
+N=40
 
 
 size = 64;  mid = size // 2;  scale = 1;  cx, cy = 20, 20; R = 10
@@ -83,5 +84,11 @@ im = ax.imshow(array, cmap='plasma')  # Display array using binary color map
 
 # Create animation
 ani = FuncAnimation(fig, conway.animate, frames=200, interval=1, blit=True)
+
+ani = FuncAnimation(fig, conway.animate, frames=200, interval=100, blit=True)
+
+writer = animation.PillowWriter(fps=15,metadata=dict(artist='Me'),bitrate=1800)
+ani.save('smoothlife.gif', writer=writer)
+
 
 plt.show()

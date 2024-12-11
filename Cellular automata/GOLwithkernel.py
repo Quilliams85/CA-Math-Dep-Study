@@ -1,9 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+import matplotlib.animation as animation
 import scipy
 
-N=60
+N=400
 
 
 class Automaton():
@@ -40,5 +41,8 @@ im = ax.imshow(array, cmap='binary')  # Display array using binary color map
 
 # Create animation
 ani = FuncAnimation(fig, conway.animate, frames=200, interval=100, blit=True)
+
+writer = animation.PillowWriter(fps=15,metadata=dict(artist='Me'),bitrate=1800)
+ani.save('GOL_kernel.gif', writer=writer)
 
 plt.show()

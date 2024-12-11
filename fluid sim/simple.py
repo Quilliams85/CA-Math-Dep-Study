@@ -188,7 +188,7 @@ newFluid.addDensity(range(10,20),range(10,20), 20)
 
 
 for i in range(max_iter):
-    newFluid.addVelocity(10, 10, np.pi/4, 1)
+    newFluid.addVelocity(10, 15, np.pi/2, 1)
     newFluid.simStep()
     newFluid.render()
 plt.show()
