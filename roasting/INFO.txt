@@ -1,0 +1,3 @@
+Experiments with plotting audio waveforms and frequency seperation(not much done)
+
+Full repo with roaster is here: https://github.com/Quilliams85/FluidBedRoaster
